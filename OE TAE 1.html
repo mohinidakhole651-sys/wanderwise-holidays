@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wanderwise Holidays Pune</title>
+
+<meta name="description" content="Wanderwise Holidays digital marketing strategy: business profile, target audience, SEO keywords, social media plan, ad design, email marketing and improvements for promoting tour packages.">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+
+<style>
+/* Layout: night hero with section index, sticky 7-section nav, alternating light bands, boarding-pass motif for packages. */
+:root{
+  --bg:#EEF5F8; --surface:#FFFFFF; --ink:#0B2735; --muted:#46606F; --line:#CFE0E8;
+  --brand:#0A5C8A; --brand-soft:#DCEEF7; --sun:#C94A08; --on-sun:#FFFFFF; --on-brand:#FFFFFF;
+  --night:#0B2735; --on-night:#EAF4F9; --soft-night:#BCD3DF;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+  --mono:'DM Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#07151D; --surface:#0E2431; --ink:#E6F1F6; --muted:#9DB5C2; --line:#1F3D4E;
+  --brand:#62B8E8; --brand-soft:#12344A; --sun:#FF8A4C; --on-sun:#1A0A00; --on-brand:#06202F;
+  --night:#04101A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#07151D; --surface:#0E2431; --ink:#E6F1F6; --muted:#9DB5C2; --line:#1F3D4E;
+  --brand:#62B8E8; --brand-soft:#12344A; --sun:#FF8A4C; --on-sun:#1A0A00; --on-brand:#06202F;
+  --night:#04101A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h3{font-size:1.15rem}
+p{margin:0}
+ul{margin:0;padding-left:1.2em}
+li+li{margin-top:5px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 22px;font:600 .95rem var(--body);text-decoration:none;cursor:pointer;min-height:44px}
+.btn-sun{background:var(--sun);color:var(--on-sun)}
+.btn-line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+
+/* header + nav */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.1rem var(--display);white-space:nowrap}
+.logo svg{width:28px;height:28px}
+.theme-btn{margin-left:auto;border:0;background:var(--brand-soft);color:var(--ink);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.05rem}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.tabs a{flex:none;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.9rem;color:var(--muted);white-space:nowrap}
+.tabs a:hover,.tabs a.on{background:var(--brand);color:var(--on-brand)}
+
+/* hero */
+.hero{background:var(--night);color:var(--on-night)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-block:54px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:34px}}
+.hero h1{font-size:clamp(2.2rem,5vw,3.7rem);font-weight:800}
+.hero .lead{margin-top:16px;font-size:1.08rem;color:var(--soft-night);max-width:36em}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.index{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid #2C5166}
+.index li{margin:0;border-bottom:1px solid #2C5166}
+.index a{display:flex;gap:14px;align-items:baseline;padding:12px 4px;text-decoration:none;color:var(--on-night)}
+.index a:hover{background:#12354A}
+.index .n{font:500 .85rem var(--mono);color:#FF9C66;min-width:2ch}
+.index b{font:700 1.05rem var(--display)}
+.index span.d{margin-left:auto;color:#8FB0C2;font-size:.82rem;text-align:right}
+
+/* sections */
+section.block{padding-block:60px}
+section.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sh{display:flex;gap:14px;align-items:baseline;margin-bottom:8px}
+.sh .n{font:500 .95rem var(--mono);color:var(--sun)}
+.sh h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+.intro{color:var(--muted);max-width:44em;margin-bottom:28px}
+.sub{margin:34px 0 12px;font:700 1.25rem var(--display)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.two>*{min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+section.alt .panel{background:var(--bg)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+section.alt .tw{background:var(--bg)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th{background:var(--brand);color:var(--on-brand);text-align:left;padding:10px 12px;font-weight:600;white-space:nowrap}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:var(--brand-soft);color:var(--ink);border-radius:999px;padding:5px 13px;font-size:.88rem}
+dl.kv{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px;margin:0}
+dl.kv dt{font-weight:600;color:var(--muted)}
+dl.kv dd{margin:0}
+@media (max-width:480px){dl.kv{grid-template-columns:1fr;gap:2px}dl.kv dd{margin-bottom:10px}}
+.usp{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.usp div{border-left:3px solid var(--sun);padding:4px 0 4px 14px}
+.usp b{display:block}
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.swot{grid-template-columns:1fr}}
+.swot div{border-radius:12px;padding:16px;background:var(--surface);border:1px solid var(--line)}
+section.alt .swot div{background:var(--bg)}
+.swot b{display:block;margin-bottom:4px;font:700 1rem var(--display)}
+
+/* boarding pass */
+.passes{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
+.pass{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;min-width:0}
+.pass .art{height:120px}
+.pass .art svg{display:block;width:100%;height:100%}
+.pass .body{padding:14px 16px;display:grid;gap:6px}
+.route{display:flex;align-items:center;gap:8px;font-family:var(--mono)}
+.route .code{font:500 1.5rem/1 var(--mono)}
+.route .arrow{flex:1;border-top:2px dashed var(--line);position:relative;min-width:20px}
+.route .arrow::after{content:"\2708";position:absolute;right:-2px;top:-12px;color:var(--brand)}
+.pass .stub{position:relative;border-top:2px dashed var(--line);padding:12px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.pass .stub::before,.pass .stub::after{content:"";position:absolute;top:-11px;width:20px;height:20px;border-radius:50%;background:var(--surface)}
+.pass .stub::before{left:-10px}.pass .stub::after{right:-10px}
+section:not(.alt) .pass .stub::before,section:not(.alt) .pass .stub::after{background:var(--bg)}
+.pass .stub b{font:800 1.3rem var(--display)}
+
+/* bars */
+.bars{display:grid;gap:12px}
+.bar-row{display:grid;grid-template-columns:minmax(120px,190px) 1fr 52px;gap:12px;align-items:center;font-size:.92rem}
+.bar-row .track{background:var(--brand-soft);border-radius:6px;height:16px;overflow:hidden}
+.bar-row .fill{display:block;height:100%;width:var(--w);background:var(--brand);border-radius:6px}
+.bar-row .v{font:500 .88rem var(--mono);text-align:right}
+@media (max-width:520px){.bar-row{grid-template-columns:1fr 52px}.bar-row .track{grid-column:1/-1;grid-row:2}}
+
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.cal div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.9rem}
+section.alt .cal div{background:var(--bg)}
+.cal b{display:block;font:700 1rem var(--display)}
+.cal i{display:block;font:normal 500 .75rem var(--mono);color:var(--sun);margin-bottom:4px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{border-top:3px solid var(--sun);background:var(--surface);padding:12px 14px;border-radius:0 0 12px 12px}
+section.alt .kpi{background:var(--bg)}
+.kpi b{display:block;font:800 1.6rem var(--display)}
+.kpi span{color:var(--muted);font-size:.88rem}
+
+/* ads */
+.swatches{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.sw{width:84px}
+.sw i{display:block;height:48px;border-radius:10px;border:1px solid var(--line)}
+.sw span{display:block;font:500 .75rem var(--mono);margin-top:4px}
+.ads{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.ad{border-radius:16px;color:#fff;padding:18px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.ad .lg{font:700 .9rem var(--display)}
+.ad h4{font:800 1.4rem/1.15 var(--display);margin:10px 0}
+.ad .bd{display:inline-block;background:#fff;color:#B3400A;font-weight:700;border-radius:999px;padding:3px 12px;font-size:.8rem}
+.ad .cta{align-self:flex-start;background:#FF7A2F;color:#1A0A00;font-weight:700;border-radius:999px;padding:9px 20px;font-size:.9rem}
+.ad small{opacity:.92}
+.ad1{background:linear-gradient(160deg,#E4622A,#0B6FA4)}
+.ad2{background:linear-gradient(160deg,#1F8A70,#0B4F6C)}
+.ad3{background:linear-gradient(160deg,#3B2A8A,#C0397B)}
+.serp{background:#fff;color:#202124;border-radius:12px;padding:14px 16px;max-width:600px}
+.serp .t{color:#1A0DAB;font-size:1.05rem}
+.serp .u{color:#188038;font-size:.82rem}
+.serp .d{font-size:.9rem;color:#4D5156}
+
+/* email + timeline */
+.flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:2px solid var(--ink)}
+.flow li{margin:0;padding:14px 18px 6px 0}
+.flow .w{font:500 .78rem var(--mono);color:var(--sun)}
+.flow b{display:block;font:700 1.05rem var(--display);margin:2px 0}
+.flow p{color:var(--muted);font-size:.9rem}
+.email{background:#fff;color:#1B2B36;border:1px solid #CFE0E8;border-radius:14px;overflow:hidden;max-width:560px}
+.email .meta{background:#EEF6FB;padding:10px 18px;font-size:.84rem;color:#46606F}
+.email .eh{background:#0A5C8A;color:#fff;padding:14px 18px;font:700 1rem var(--display)}
+.email .eb{padding:18px;display:grid;gap:10px;font-size:.95rem}
+.email .eb ul{margin:0}
+.email .go{display:inline-block;background:#D2500A;color:#fff;font-weight:700;padding:10px 22px;border-radius:999px}
+.email .fine{font-size:.78rem;color:#5B6B78}
+
+.plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.plan .panel b{display:block;font:800 1.1rem var(--display);color:var(--sun);margin-bottom:4px}
+.concl{background:var(--night);color:var(--on-night);border-radius:16px;padding:26px;margin-top:34px}
+.concl h3{font-size:1.4rem;margin-bottom:8px}
+.concl p{color:var(--soft-night);max-width:50em}
+
+footer.foot{background:var(--night);color:#9DB9C8}
+footer.foot .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.88rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<header class="site">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="#top" aria-label="Wanderwise Holidays home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="var(--brand)" stroke-width="2"/><path d="M22.5 9.5l-4 10-10 4 4-10z" fill="var(--sun)"/><circle cx="16" cy="16" r="1.6" fill="var(--surface)"/></svg>
+        Wanderwise Holidays
+      </a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">&#9680;</button>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <a href="#profile">Business profile</a><a href="#audience">Target audience</a><a href="#seo">SEO keywords</a><a href="#social">Social media</a><a href="#ads">Ad design</a><a href="#email">Email marketing</a><a href="#improve">Improvements</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Promoting tour packages online, from first search to booking</h1>
+      <p class="lead">The digital marketing strategy for Wanderwise Holidays, a Pune travel agency selling holidays to Goa, Manali, Kerala, Rajasthan, Bali and Dubai. Seven parts, one plan.</p>
+      <div class="cta"><a class="btn btn-sun" href="#profile">Start with the business</a><a class="btn btn-line" href="#improve">Jump to improvements</a></div>
+    </div>
+    <ol class="index" aria-label="Contents">
+      <li><a href="#profile"><span class="n">1</span><b>Business profile</b><span class="d">who we are</span></a></li>
+      <li><a href="#audience"><span class="n">2</span><b>Target audience</b><span class="d">who we sell to</span></a></li>
+      <li><a href="#seo"><span class="n">3</span><b>SEO keywords</b><span class="d">how we get found</span></a></li>
+      <li><a href="#social"><span class="n">4</span><b>Social media plan</b><span class="d">how we stay seen</span></a></li>
+      <li><a href="#ads"><span class="n">5</span><b>Advertisement design</b><span class="d">how we persuade</span></a></li>
+      <li><a href="#email"><span class="n">6</span><b>Email marketing</b><span class="d">how we bring people back</span></a></li>
+      <li><a href="#improve"><span class="n">7</span><b>Improvement suggestions</b><span class="d">how we grow</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 1 -->
+<section class="block" id="profile">
+  <div class="wrap">
+    <div class="sh"><span class="n">1</span><h2>Business profile</h2></div>
+    <p class="intro">Wanderwise Holidays is a mid-sized travel agency that sells ready-made and customised tour packages for domestic and international trips, with the promise of stress-free travel at honest prices.</p>
+    <div class="panel"><dl class="kv">
+      <dt>Business name</dt><dd>Wanderwise Holidays</dd>
+      <dt>Type</dt><dd>Travel agency, online and walk-in</dd>
+      <dt>Founded</dt><dd>2018</dd>
+      <dt>Head office</dt><dd>Pune, Maharashtra</dd>
+      <dt>Services</dt><dd>Domestic and international tour packages, honeymoon and family trips, group tours, corporate offsites, flight and hotel booking, visa assistance, travel insurance</dd>
+      <dt>Website</dt><dd class="mono">www.wanderwiseholidays.in</dd>
+      <dt>Mission</dt><dd>Make well-planned travel affordable and hassle-free for every Indian traveller</dd>
+      <dt>Vision</dt><dd>Become the most trusted regional travel brand in western India by 2030</dd>
+    </dl></div>
+
+    <h3 class="sub">Unique selling points</h3>
+    <div class="usp">
+      <div><b>Transparent pricing</b>No hidden charges</div>
+      <div><b>Custom itineraries</b>Plans built around the traveller</div>
+      <div><b>24x7 trip support</b>From booking to return</div>
+      <div><b>Verified hotels and guides</b>Checked before we recommend</div>
+      <div><b>Easy payments</b>EMI and early-bird options</div>
+    </div>
+
+    <h3 class="sub">Sample tour packages to promote</h3>
+    <div class="passes" id="passes"></div>
+
+    <h3 class="sub">SWOT snapshot</h3>
+    <div class="swot">
+      <div><b>Strengths</b>Custom itineraries, transparent pricing, responsive support</div>
+      <div><b>Weaknesses</b>Small marketing budget, limited brand awareness outside Maharashtra</div>
+      <div><b>Opportunities</b>Rising domestic tourism, demand for experiential and offbeat trips, social media discovery</div>
+      <div><b>Threats</b>Large online travel platforms with deep discounts, seasonal demand, fluctuating airfare costs</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="block alt" id="audience">
+  <div class="wrap">
+    <div class="sh"><span class="n">2</span><h2>Target audience</h2></div>
+    <p class="intro">The core audience is urban Indians aged 22 to 45 who research and book trips online, with five priority segments.</p>
+    <div class="tw"><table>
+      <tr><th>Segment</th><th>Age</th><th>Income (INR a year)</th><th>Interests and needs</th><th>Platforms</th><th>Best-fit packages</th></tr>
+      <tr><td>Young professionals and friend groups</td><td>22-30</td><td>4-10 lakh</td><td>Budget trips, adventure, photos for social media, weekend getaways</td><td>Instagram, YouTube, Google</td><td>Manali and Kasol, Goa</td></tr>
+      <tr><td>Newly married couples</td><td>25-35</td><td>8-20 lakh</td><td>Privacy, romantic stays, fuss-free planning</td><td>Instagram, Pinterest, Google, WhatsApp</td><td>Bali, Kerala</td></tr>
+      <tr><td>Families with children</td><td>30-45</td><td>10-25 lakh</td><td>Safety, kid-friendly activities, comfortable travel, fixed budget</td><td>Facebook, WhatsApp, Google</td><td>Dubai, Rajasthan</td></tr>
+      <tr><td>Senior citizens</td><td>55+</td><td>Savings or pension</td><td>Slow-paced pilgrimage and heritage trips, medical support, group comfort</td><td>Facebook, WhatsApp, calls</td><td>Rajasthan, Kerala, pilgrim circuits</td></tr>
+      <tr><td>Corporate teams</td><td>25-50</td><td>Company budget</td><td>Team-building offsites, group discounts, single invoice</td><td>LinkedIn, email</td><td>Goa, Lonavala, Jaipur group tours</td></tr>
+    </table></div>
+    <div class="two" style="margin-top:22px">
+      <div class="panel"><h3>Geographic focus</h3><p class="muted" style="margin-top:6px">Pune, Mumbai, Nashik, Nagpur and other Maharashtra cities first, then Gujarat and Karnataka.</p></div>
+      <div class="panel">
+        <h3>Sample persona: Riya Deshmukh, 28</h3>
+        <dl class="kv" style="margin-top:10px">
+          <dt>Role</dt><dd>Marketing executive in Pune</dd>
+          <dt>Goal</dt><dd>A 5-day trip with her husband for their first anniversary within INR 60,000</dd>
+          <dt>Pain points</dt><dd>Too many options, fear of hidden costs, no time to compare hotels</dd>
+          <dt>Behaviour</dt><dd>Searches on Google, saves reels on Instagram, reads reviews, books after a WhatsApp conversation</dd>
+          <dt>How we win her</dt><dd>Reels of real couples' trips, a clear all-inclusive price, a quick WhatsApp reply</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="block" id="seo">
+  <div class="wrap">
+    <div class="sh"><span class="n">3</span><h2>SEO keywords</h2></div>
+    <p class="intro">The SEO plan targets buyers at every stage, from "where should I go" searches to "book now" searches, with each keyword group mapped to a page. Check search volumes in Google Keyword Planner before final selection.</p>
+    <div class="two">
+      <div>
+        <h3 class="sub" style="margin-top:0">Primary keywords</h3>
+        <div class="tw"><table>
+          <tr><th>Keyword</th><th>Intent</th><th>Target page</th></tr>
+          <tr><td>tour packages</td><td>Informational, commercial</td><td>Home page</td></tr>
+          <tr><td>travel agency in Pune</td><td>Local, commercial</td><td>Home, Contact</td></tr>
+          <tr><td>holiday packages</td><td>Commercial</td><td>Packages listing</td></tr>
+          <tr><td>best travel agency near me</td><td>Local, transactional</td><td>Google Business Profile</td></tr>
+        </table></div>
+      </div>
+      <div>
+        <h3 class="sub" style="margin-top:0">Destination and package keywords</h3>
+        <div class="tw"><table>
+          <tr><th>Keyword</th><th>Intent</th><th>Target page</th></tr>
+          <tr><td>Manali tour package from Pune</td><td>Transactional</td><td>Manali page</td></tr>
+          <tr><td>Goa tour package for 4 days</td><td>Transactional</td><td>Goa page</td></tr>
+          <tr><td>Kerala honeymoon package</td><td>Transactional</td><td>Kerala page</td></tr>
+          <tr><td>Rajasthan family tour package</td><td>Transactional</td><td>Rajasthan page</td></tr>
+          <tr><td>Bali package from India</td><td>Transactional</td><td>Bali page</td></tr>
+          <tr><td>Dubai tour package with visa</td><td>Transactional</td><td>Dubai page</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Long-tail keywords</h3>
+    <p class="muted" style="margin-bottom:10px">Lower competition, higher conversion.</p>
+    <div class="tags">
+      <span class="tag">cheap Goa tour package for friends under 10000</span><span class="tag">5 nights 6 days Kerala package with flights</span><span class="tag">Manali Kasol backpacking trip from Pune</span><span class="tag">best honeymoon destinations in India in December</span><span class="tag">all inclusive Bali honeymoon package for couples</span><span class="tag">senior citizen tour packages in India with medical assistance</span><span class="tag">customised family holiday packages with kids</span>
+    </div>
+
+    <h3 class="sub">Seasonal and informational keywords for blog content</h3>
+    <div class="tags">
+      <span class="tag">best places to visit in India in winter</span><span class="tag">Diwali holiday packages 2026</span><span class="tag">Christmas and New Year trip packages</span><span class="tag">summer vacation destinations for family</span><span class="tag">Goa travel guide for first-timers</span><span class="tag">documents required for Dubai tourist visa</span>
+    </div>
+
+    <div class="two" style="margin-top:34px">
+      <div>
+        <h3 style="margin-bottom:10px">On-page and technical SEO actions</h3>
+        <ul>
+          <li>Use one primary keyword in each page title (under 60 characters), meta description (under 160 characters), H1 and the first 100 words.</li>
+          <li>Create a detailed page for every package with day-wise itinerary, inclusions, exclusions, price and FAQs.</li>
+          <li>Add FAQ and Tour schema markup so packages can appear as rich results.</li>
+          <li>Compress images, use descriptive alt text, and keep mobile load time under 3 seconds.</li>
+          <li>Claim and optimise the Google Business Profile with photos, services, hours and review replies.</li>
+          <li>Publish two travel blogs per month, link them to package pages, and earn backlinks from travel bloggers and local directories.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px">Sample search result for the Goa page</h3>
+        <div class="serp"><div class="u">www.wanderwiseholidays.in &rsaquo; goa</div><div class="t">Goa Tour Package from Pune, 4 Days from INR 9,999 | Wanderwise</div><div class="d">Book a 3N/4D Goa beach holiday with hotel, breakfast and transfers. Customisable itinerary and 24x7 support. Get a free quote today.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="block alt" id="social">
+  <div class="wrap">
+    <div class="sh"><span class="n">4</span><h2>Social media marketing plan</h2></div>
+    <p class="intro">Goal: generate 300 qualified package enquiries per month within six months by turning inspiration (reels and photos) into conversations (WhatsApp and DMs).</p>
+
+    <h3 class="sub" style="margin-top:0">Platform strategy</h3>
+    <div class="tw"><table>
+      <tr><th>Platform</th><th>Role</th><th>Audience</th><th>Content type</th><th>Frequency</th></tr>
+      <tr><td>Instagram</td><td>Inspiration and lead generation</td><td>22-35, couples, friend groups</td><td>Reels, carousels, stories, customer travel photos</td><td>5 posts and daily stories a week</td></tr>
+      <tr><td>Facebook</td><td>Community and family trust</td><td>30-60, families, seniors</td><td>Albums, testimonials, offers, live Q&amp;A</td><td>4 posts a week</td></tr>
+      <tr><td>YouTube</td><td>Deep research and trust</td><td>25-45</td><td>Destination vlogs, itinerary walkthroughs, Shorts</td><td>1 video and 2 Shorts a week</td></tr>
+      <tr><td>WhatsApp Business</td><td>Conversion</td><td>All</td><td>Catalogue, quick replies, broadcast lists</td><td>Daily replies, 1 broadcast a week</td></tr>
+      <tr><td>LinkedIn</td><td>Corporate leads</td><td>HR and admin managers</td><td>Offsite case studies, group offers</td><td>1 post a week</td></tr>
+      <tr><td>Pinterest</td><td>Evergreen discovery</td><td>Couples, planners</td><td>Itinerary pins, honeymoon boards</td><td>5 pins a week</td></tr>
+    </table></div>
+
+    <div class="two" style="margin-top:34px">
+      <div>
+        <h3 style="margin-bottom:14px">Content pillars (share of posts)</h3>
+        <div class="bars">
+          <div class="bar-row"><span>Destination inspiration</span><span class="track"><span class="fill" style="--w:30%"></span></span><span class="v">30%</span></div>
+          <div class="bar-row"><span>Package promotion</span><span class="track"><span class="fill" style="--w:25%"></span></span><span class="v">25%</span></div>
+          <div class="bar-row"><span>Trust and proof</span><span class="track"><span class="fill" style="--w:20%"></span></span><span class="v">20%</span></div>
+          <div class="bar-row"><span>Travel tips</span><span class="track"><span class="fill" style="--w:15%"></span></span><span class="v">15%</span></div>
+          <div class="bar-row"><span>Engagement</span><span class="track"><span class="fill" style="--w:10%"></span></span><span class="v">10%</span></div>
+        </div>
+        <p class="muted" style="margin-top:12px;font-size:.9rem">Inspiration: "5 hidden places in Manali". Promotion: price cards and itinerary carousels. Proof: reviews and trip photos. Tips: packing lists and visa guides. Engagement: polls and "Guess the place" quizzes.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:14px">Paid social budget (INR 40,000 a month)</h3>
+        <div class="bars">
+          <div class="bar-row"><span>Instagram and Facebook ads</span><span class="track"><span class="fill" style="--w:60%"></span></span><span class="v">24,000</span></div>
+          <div class="bar-row"><span>Retargeting visitors</span><span class="track"><span class="fill" style="--w:20%"></span></span><span class="v">8,000</span></div>
+          <div class="bar-row"><span>YouTube ads</span><span class="track"><span class="fill" style="--w:12.5%"></span></span><span class="v">5,000</span></div>
+          <div class="bar-row"><span>Boosting best posts</span><span class="track"><span class="fill" style="--w:7.5%"></span></span><span class="v">3,000</span></div>
+        </div>
+        <p class="muted" style="margin-top:12px;font-size:.9rem">Ads collect lead forms and click-to-WhatsApp chats. Retargeting brings back people who viewed packages.</p>
+      </div>
+    </div>
+
+    <h3 class="sub">Sample weekly content calendar</h3>
+    <div class="cal">
+      <div><i>Mon &middot; Instagram</i><b>Motivation reel</b>"Monday blues? Book a Goa weekend."</div>
+      <div><i>Tue &middot; Facebook</i><b>Family testimonial</b>Photo album from a recent trip</div>
+      <div><i>Wed &middot; Instagram</i><b>Carousel</b>"Kerala in 5 days: itinerary and price"</div>
+      <div><i>Thu &middot; YouTube</i><b>Travel vlog</b>Manali and Kasol</div>
+      <div><i>Fri &middot; Insta, Facebook</i><b>Weekend deal</b>Flash offer with 24-hour countdown story</div>
+      <div><i>Sat &middot; Instagram</i><b>Poll</b>"Beach or mountains this December?"</div>
+      <div><i>Sun &middot; WhatsApp, Facebook</i><b>Broadcast</b>Top 3 offers of the week</div>
+    </div>
+
+    <div class="two" style="margin-top:34px">
+      <div>
+        <h3 style="margin-bottom:10px">Campaign ideas</h3>
+        <ul>
+          <li><b>#WanderwiseStories:</b> customers share trip photos and tag the agency; the best entry wins a discount voucher.</li>
+          <li><b>Festival campaigns:</b> Diwali Getaways, Christmas and New Year Specials, Summer Escape Sale.</li>
+          <li><b>Influencer collaboration:</b> 5 to 10 micro travel creators (10,000 to 50,000 followers) get a free trip in exchange for reels.</li>
+          <li><b>Refer a friend:</b> INR 1,000 off for the referrer and the new traveller.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px">KPIs to track every month</h3>
+        <div class="kpis">
+          <div class="kpi"><b>&gt;4%</b><span>Engagement rate</span></div>
+          <div class="kpi"><b>10%</b><span>Follower growth</span></div>
+          <div class="kpi"><b>&gt;1.5%</b><span>Ad click-through</span></div>
+          <div class="kpi"><b>&lt;&#8377;150</b><span>Cost per lead</span></div>
+          <div class="kpi"><b>10%</b><span>Enquiry to booking</span></div>
+          <div class="kpi"><b>&gt;5x</b><span>Return on ad spend</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="block" id="ads">
+  <div class="wrap">
+    <div class="sh"><span class="n">5</span><h2>Advertisement design</h2></div>
+    <p class="intro">Three ad concepts cover three goals: a festive sale (conversion), a honeymoon offer (emotion) and a brand video (awareness). All follow the AIDA model: Attention, Interest, Desire, Action.</p>
+
+    <div class="two">
+      <div class="panel">
+        <h3 style="margin-bottom:12px">Brand design guidelines</h3>
+        <div class="swatches">
+          <div class="sw"><i style="background:#0B6FA4"></i><span>#0B6FA4<br>Ocean blue</span></div>
+          <div class="sw"><i style="background:#FF7A2F"></i><span>#FF7A2F<br>Sunset orange</span></div>
+          <div class="sw"><i style="background:#FFFFFF"></i><span>#FFFFFF<br>White</span></div>
+        </div>
+        <dl class="kv">
+          <dt>Fonts</dt><dd>Poppins Bold for headlines, Open Sans for body text</dd>
+          <dt>Logo</dt><dd>A compass with a paper plane, top-left corner</dd>
+          <dt>Imagery</dt><dd>Bright, real destination photos with people enjoying the trip</dd>
+          <dt>Tagline</dt><dd>"Travel more. Worry less."</dd>
+        </dl>
+      </div>
+      <div class="panel">
+        <h3 style="margin-bottom:10px">Design tips applied</h3>
+        <ul>
+          <li>One message and one call to action per ad.</li>
+          <li>Text covers less than 20% of the image, and the headline stays readable on small phone screens.</li>
+          <li>Prices and deadlines are shown clearly to create urgency.</li>
+          <li>A/B test two headlines and two images, then put the budget behind the winner.</li>
+        </ul>
+        <p class="muted" style="margin-top:10px;font-size:.9rem">Tools: Canva, Adobe Express or Figma for posters; CapCut or InShot for reels.</p>
+      </div>
+    </div>
+
+    <h3 class="sub">The three ads</h3>
+    <div class="ads">
+      <div class="ad ad1"><div><div class="lg">&#9992; Wanderwise Holidays</div><span class="bd">Flat 15% off till 31 Oct</span></div><div><h4>Diwali Getaway Sale: Goa from &#8377;9,999</h4><small>3 nights, 4 days with hotel, breakfast and airport transfers</small></div><span class="cta">Book Now</span></div>
+      <div class="ad ad2"><div><div class="lg">&#9992; Wanderwise Holidays</div><span class="bd">Free photoshoot, first 20 bookings</span></div><div><h4>Your love story deserves Bali</h4><small>Flights, 4-star stay, candlelight dinner and private transfers from &#8377;49,999</small></div><span class="cta">Get Free Quote</span></div>
+      <div class="ad ad3"><div><div class="lg">&#9992; Wanderwise Holidays</div><span class="bd">15-second reel</span></div><div><h4>Stuck in the same routine? Let us plan your escape.</h4><small>Packages from &#8377;9,999</small></div><span class="cta">Message us on WhatsApp</span></div>
+    </div>
+    <p class="muted" style="margin-top:10px;font-size:.88rem">Layout previews. In the final ads, replace the colour backgrounds with real destination photos.</p>
+
+    <div class="two" style="margin-top:30px">
+      <div class="panel"><h3 style="margin-bottom:6px">Ad 1: Festive sale poster</h3><p class="muted" style="font-size:.9rem;margin-bottom:8px">Instagram and Facebook feed, 1080 x 1080 px</p>
+        <ul><li><b>Visual:</b> couple on a sunlit Goa beach with an orange banner across the top</li><li><b>Offer badge:</b> flat 15% off, book before 31 October</li><li><b>Footer:</b> logo, phone number, website, tagline</li><li><b>Why it works:</b> a clear price, a deadline and one simple action</li></ul></div>
+      <div class="panel"><h3 style="margin-bottom:6px">Ad 2: Honeymoon carousel</h3><p class="muted" style="font-size:.9rem;margin-bottom:8px">Instagram, 5 slides, 1080 x 1350 px</p>
+        <ol style="margin:0;padding-left:1.2em"><li>Bali villa pool: "Your love story deserves Bali."</li><li>Day-wise highlights: Ubud, Nusa Penida, sunset dinner</li><li>Included: flights, 4-star stay, candlelight dinner, transfers</li><li>A real couple's review with a photo</li><li>"Bali from INR 49,999. Free photoshoot for the first 20 bookings." Button: Get Free Quote</li></ol></div>
+    </div>
+
+    <h3 class="sub">Ad 3: 15-second reel script (vertical, 1080 x 1920 px)</h3>
+    <div class="tw"><table>
+      <tr><th>Seconds</th><th>Scene</th><th>Voice-over or text</th></tr>
+      <tr><td>0-3</td><td>Fast cuts of a mountain, beach and palace</td><td>"Stuck in the same routine?"</td></tr>
+      <tr><td>3-8</td><td>Happy travellers laughing, drone shots</td><td>"Let us plan your next escape."</td></tr>
+      <tr><td>8-12</td><td>Package price cards flash on screen</td><td>"Packages from INR 9,999."</td></tr>
+      <tr><td>12-15</td><td>Logo and button</td><td>"Wanderwise Holidays. Message us on WhatsApp."</td></tr>
+    </table></div>
+
+    <h3 class="sub">Google Search ad</h3>
+    <div class="serp"><div class="u">Ad &middot; www.wanderwiseholidays.in</div><div class="t">Goa Tour Package from INR 9,999 | Hotel, Breakfast and Transfers Included | Free Quote in 10 Minutes</div><div class="d">Customisable 3N/4D Goa trip with 24x7 support. No hidden charges. Book your holiday with Wanderwise today.</div></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="block alt" id="email">
+  <div class="wrap">
+    <div class="sh"><span class="n">6</span><h2>Email marketing</h2></div>
+    <p class="intro">Email turns website visitors and past customers into repeat bookings at a very low cost per lead. The plan builds a subscriber list, nurtures it with useful content, and sends timed offers.</p>
+
+    <div class="two">
+      <div class="panel"><h3 style="margin-bottom:10px">Building the email list</h3>
+        <ul><li>A "Get a free 10-page India travel checklist" pop-up on the website</li><li>A newsletter sign-up form in the footer and on every blog post</li><li>Lead forms on Facebook and Instagram ads</li><li>A booking form that asks for consent to receive offers</li><li>Tools: Mailchimp, Brevo or Zoho Campaigns</li></ul></div>
+      <div class="panel"><h3 style="margin-bottom:10px">Email segments</h3>
+        <dl class="kv"><dt>New subscribers</dt><dd>Welcome series and popular packages</dd><dt>Interested leads</dt><dd>Itinerary, reviews, limited-time offer</dd><dt>Past customers</dt><dd>Thank-you, review request, refer-a-friend, next-trip deals</dd><dt>Corporate contacts</dt><dd>Group tour and offsite packages</dd></dl></div>
+    </div>
+
+    <h3 class="sub">Welcome campaign flow</h3>
+    <ol class="flow">
+      <li><span class="w">Immediately</span><b>1. Welcome</b><p>Introduce the brand, share the free checklist and top 3 packages.</p></li>
+      <li><span class="w">Day 3</span><b>2. Inspiration</b><p>Share a destination guide to build interest.</p></li>
+      <li><span class="w">Day 6</span><b>3. Social proof</b><p>Share customer stories and reviews.</p></li>
+      <li><span class="w">Day 9</span><b>4. Offer</b><p>Give a 10% first-booking discount valid for 7 days.</p></li>
+      <li><span class="w">Day 14</span><b>5. Reminder</b><p>Last-chance reminder and a link to chat on WhatsApp.</p></li>
+    </ol>
+    <p class="muted" style="margin-top:12px;font-size:.92rem">Other triggers: enquiry follow-up 24 hours after an enquiry, a post-trip email 3 days after return asking for a Google review and offering a referral discount, and festival emails before Diwali, December and summer.</p>
+
+    <div class="two" style="margin-top:30px">
+      <div>
+        <h3 style="margin-bottom:10px">Sample subject lines</h3>
+        <ul><li>Your free India travel checklist is inside</li><li>Goa from INR 9,999: pack your bags this weekend</li><li>Riya, your Bali honeymoon quote is ready</li><li>48 hours left: 15% off Diwali getaways</li><li>How was your trip? Tell us and get INR 1,000 off your next one</li></ul>
+        <h3 style="margin:26px 0 10px">Best practices and KPIs</h3>
+        <ul><li>Personalise the name and send time; use a mobile-friendly single-column layout.</li><li>One clear button per email, subject under 50 characters.</li><li>Include an unsubscribe link and honour consent, as required under India's Digital Personal Data Protection Act, 2023.</li><li>A/B test subject lines and send times, and clean inactive subscribers every quarter.</li></ul>
+        <div class="kpis" style="margin-top:14px">
+          <div class="kpi"><b>&gt;25%</b><span>Open rate</span></div><div class="kpi"><b>&gt;3%</b><span>Click rate</span></div><div class="kpi"><b>&gt;2%</b><span>Conversion</span></div><div class="kpi"><b>&lt;0.5%</b><span>Unsubscribes</span></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px">Sample email: Diwali offer</h3>
+        <div class="email">
+          <div class="meta"><b>Subject:</b> 15% off Diwali getaways: only till 31 October<br><b>Preview:</b> Goa, Manali and Kerala trips with hotels and transfers included.</div>
+          <div class="eh">&#9992; Wanderwise Holidays</div>
+          <div class="eb">
+            <p>Hi [First Name],</p>
+            <p>The festive season is the perfect time to switch off and explore. This Diwali, we are giving 15% off on our most loved holiday packages:</p>
+            <ul><li>Goa Beach Escape: from INR 9,999</li><li>Magical Manali and Kasol: from INR 14,999</li><li>Kerala Backwaters and Munnar: from INR 17,499</li></ul>
+            <p>Every package includes a hotel stay, daily breakfast, sightseeing and airport or station transfers, with no hidden charges. Our trip experts are on WhatsApp 24x7 to customise your plan.</p>
+            <p><span class="go">Claim My Offer</span></p>
+            <p>Seats fill up fast during the holidays, so book before 31 October to lock in the discount.</p>
+            <p>Happy travels,<br>Team Wanderwise Holidays</p>
+            <p class="fine"><i>You are receiving this because you subscribed on our website. Unsubscribe anytime.</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="block" id="improve">
+  <div class="wrap">
+    <div class="sh"><span class="n">7</span><h2>Business improvement suggestions</h2></div>
+    <p class="intro">The agency can grow faster by fixing five gaps: trust, website experience, pricing flexibility, customer retention and measurement.</p>
+    <div class="tw"><table>
+      <tr><th>Area</th><th>Suggestion</th><th>Expected benefit</th></tr>
+      <tr><td>Website</td><td>Add online booking, live chat, a package comparison tool and a fast mobile layout</td><td>Higher enquiry-to-booking conversion</td></tr>
+      <tr><td>Trust</td><td>Show Google reviews, video testimonials, registrations and safety certifications on every package page</td><td>Lower buyer hesitation</td></tr>
+      <tr><td>Payments</td><td>Offer EMI, part-payment and UPI options, plus a price-match promise</td><td>More bookings from budget travellers</td></tr>
+      <tr><td>Product</td><td>Add niche packages such as workation, women-only group trips, wellness retreats and weekend getaways</td><td>Reach new segments and reduce seasonality</td></tr>
+      <tr><td>Customer retention</td><td>Start a loyalty programme with points for every trip and a birthday or anniversary offer</td><td>More repeat and referral bookings</td></tr>
+      <tr><td>Partnerships</td><td>Tie up with hotels, airlines, cab operators, and colleges or companies for group deals</td><td>Better margins and a steady group pipeline</td></tr>
+      <tr><td>Reviews</td><td>Request a Google review within 3 days of every trip and reply to all reviews</td><td>Stronger local SEO and credibility</td></tr>
+      <tr><td>Customer support</td><td>Use a WhatsApp chatbot for instant replies and a CRM to track every lead</td><td>Faster response and no lost leads</td></tr>
+      <tr><td>Analytics</td><td>Set up Google Analytics 4, conversion tracking and a monthly dashboard</td><td>Spend moves to channels that bring bookings</td></tr>
+      <tr><td>Team</td><td>Train staff in digital selling and content creation</td><td>Consistent brand voice and quality</td></tr>
+    </table></div>
+
+    <h3 class="sub">Suggested 90-day action plan</h3>
+    <div class="plan">
+      <div class="panel"><b>Month 1</b>Fix website basics, claim the Google Business Profile, set up analytics, and launch Instagram and WhatsApp Business.</div>
+      <div class="panel"><b>Month 2</b>Publish package pages and the first 8 blogs, start paid ads, and launch the email welcome series.</div>
+      <div class="panel"><b>Month 3</b>Run the Diwali or December campaign, begin influencer collaborations, review results and shift budget to the best channels.</div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>&copy; 2026 Wanderwise Holidays, Pune. Prices are indicative.</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TravelAgency","name":"Wanderwise Holidays","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"priceRange":"INR 9999 - 49999","description":"Tour packages from Pune to Goa, Manali, Kerala, Rajasthan, Bali and Dubai."}
+</script>
+
+<script>
+(function(){
+  var scenes = {
+    goa:'<svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB347"/><stop offset="1" stop-color="#FF7E5F"/></linearGradient></defs><rect width="320" height="150" fill="url(#gs)"/><circle cx="230" cy="78" r="30" fill="#FFE9A8"/><rect y="86" width="320" height="40" fill="#1E88B8"/><path d="M0 98q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0" fill="none" stroke="#7CC7E6" stroke-width="2"/><rect y="122" width="320" height="28" fill="#F2C98B"/><path d="M70 130q6-50 22-72" stroke="#5B3A1E" stroke-width="5" fill="none"/><g fill="#1F7A4A"><path d="M92 58q-30-8-44 8q26-6 44-8z"/><path d="M92 58q-18-24-40-22q22 4 40 22z"/><path d="M92 58q18-22 42-16q-24 2-42 16z"/><path d="M92 58q32 2 42 20q-20-14-42-20z"/></g></svg>',
+    manali:'<svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ms" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FA8DC"/><stop offset="1" stop-color="#CFE5F5"/></linearGradient></defs><rect width="320" height="150" fill="url(#ms)"/><path d="M-10 120L70 34l50 56 40-46 80 76z" fill="#5D7A94"/><path d="M70 34l-14 16 14-6 10 10zM160 44l-12 14 12-6 10 10z" fill="#fff"/><path d="M120 120L220 52l110 68z" fill="#476680"/><path d="M220 52l-16 16 16-6 14 8z" fill="#fff"/><rect y="118" width="320" height="32" fill="#2F6B4A"/><g fill="#1B4D33"><path d="M30 130l12-34 12 34z"/><path d="M58 134l10-28 10 28z"/><path d="M250 132l12-36 12 36z"/><path d="M280 136l9-26 9 26z"/></g></svg>',
+    kerala:'<svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ks" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE8C8"/><stop offset="1" stop-color="#F3F8D8"/></linearGradient></defs><rect width="320" height="150" fill="url(#ks)"/><rect y="88" width="320" height="62" fill="#2A8C82"/><path d="M0 104q20-6 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0" fill="none" stroke="#7FD1C7" stroke-width="2"/><path d="M90 100h130l-14 18H104z" fill="#7A4A22"/><path d="M100 100q55-44 110 0z" fill="#E0B341"/><path d="M0 88q40-18 80-4t80 0 80-6 80 8v6H0z" fill="#1F6B3A"/><path d="M262 90q-2-40 6-62" stroke="#5B3A1E" stroke-width="4" fill="none"/><g fill="#1F7A4A"><path d="M268 28q-26-6-38 8q22-4 38-8z"/><path d="M268 28q18-20 38-14q-22 2-38 14z"/><path d="M268 28q22 6 28 22q-14-14-28-22z"/></g></svg>',
+    rajasthan:'<svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="rs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6B26B"/><stop offset="1" stop-color="#F9DDA4"/></linearGradient></defs><rect width="320" height="150" fill="url(#rs)"/><circle cx="262" cy="40" r="20" fill="#FFF1C9"/><rect x="60" y="74" width="200" height="60" fill="#C9683A"/><g fill="#B5562B"><rect x="68" y="56" width="26" height="78"/><rect x="226" y="56" width="26" height="78"/></g><g fill="#E3935F"><path d="M64 56q17-26 34 0z"/><path d="M222 56q17-26 34 0z"/><path d="M130 74q30-40 60 0z"/></g><g fill="#7A2E12"><path d="M148 134v-26q12-14 24 0v26z"/><path d="M100 134v-18q8-10 16 0v18z"/><path d="M204 134v-18q8-10 16 0v18z"/></g><rect y="134" width="320" height="16" fill="#D9A25F"/></svg>',
+    bali:'<svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="bs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6A4C93"/><stop offset="1" stop-color="#FF9E7A"/></linearGradient></defs><rect width="320" height="150" fill="url(#bs)"/><circle cx="160" cy="92" r="26" fill="#FFD9A0"/><g fill="#2A2A38"><path d="M82 140V70l14-10 10 14 8 6v60z"/><path d="M238 140V70l-14-10-10 14-8 6v60z"/><path d="M82 70h26v-8H82zM212 70h26v-8h-26z"/></g><rect y="140" width="320" height="10" fill="#1C1C28"/><g fill="#1F5A3A"><path d="M30 140q-4-40 10-62q-2 34 6 62z"/><path d="M290 140q4-40-10-62q2 34-6 62z"/></g></svg>',
+    dubai:'<svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ds" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2A5C"/><stop offset="1" stop-color="#F29C6B"/></linearGradient></defs><rect width="320" height="150" fill="url(#ds)"/><g fill="#14203F"><rect x="20" y="86" width="26" height="64"/><rect x="52" y="70" width="22" height="80"/><rect x="236" y="76" width="24" height="74"/><rect x="266" y="92" width="30" height="58"/><path d="M150 150L160 10l10 140z"/><path d="M138 150q4-50 14-70h16q10 20 14 70z"/></g><g fill="#F7D488" opacity=".9"><rect x="26" y="96" width="4" height="4"/><rect x="36" y="110" width="4" height="4"/><rect x="58" y="84" width="4" height="4"/><rect x="242" y="90" width="4" height="4"/><rect x="274" y="106" width="4" height="4"/></g></svg>'
+  };
+  var pk = [
+    ['goa','Goa Beach Escape','GOI','3 nights, 4 days','9,999','Oct to Feb'],
+    ['manali','Magical Manali and Kasol','KUU','5 nights, 6 days','14,999','Mar to Jun, Oct to Dec'],
+    ['kerala','Kerala Backwaters and Munnar','COK','5 nights, 6 days','17,499','Sep to Mar'],
+    ['rajasthan','Rajasthan Royal Heritage','JAI','6 nights, 7 days','19,999','Oct to Mar'],
+    ['bali','Bali Honeymoon Special','DPS','5 nights, 6 days','49,999','Apr to Oct'],
+    ['dubai','Dubai Family Fun','DXB','4 nights, 5 days','42,999','Nov to Mar']
+  ];
+  document.getElementById('passes').innerHTML = pk.map(function(p){
+    return '<article class="pass"><div class="art">'+scenes[p[0]]+'</div><div class="body">'+
+      '<div class="route"><span class="code">PNQ</span><span class="arrow"></span><span class="code">'+p[2]+'</span></div>'+
+      '<h3>'+p[1]+'</h3><p class="muted" style="font-size:.9rem">'+p[3]+'<br>Best season: '+p[5]+'</p></div>'+
+      '<div class="stub"><span class="muted" style="font-size:.8rem">from, per person</span><b>&#8377;'+p[4]+'</b></div></article>';
+  }).join('');
+
+  var links = [].slice.call(document.querySelectorAll('#tabs a'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function spy(){
+    var y = window.scrollY + 170, cur = -1;
+    secs.forEach(function(s,i){ if(s && s.offsetTop <= y) cur = i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i===cur); });
+    if(cur>-1 && links[cur].scrollIntoView){ var t=document.getElementById('tabs'); var l=links[cur]; t.scrollLeft = l.offsetLeft - 16; }
+  }
+  window.addEventListener('scroll', spy, {passive:true}); spy();
+
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var r = document.documentElement, dark = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    r.dataset.theme = dark ? 'light' : 'dark';
+  });
+})();
+</script>
+
+</body>
+</html>
